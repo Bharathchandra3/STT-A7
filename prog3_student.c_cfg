@@ -1,0 +1,113 @@
+// CFG for prog3_student.c
+digraph {
+	rankdir=TB
+	1 [label="Block 1
+/*
+* Program: Student Grade Analy" shape=box]
+	2 [label="Block 2
+for(i = 0; i < MAX_STUDENTS; i" shape=box]
+	3 [label="Block 3
+students[i].id = i + 1001;
+students[i].marks_math = 50 + " shape=box]
+	4 [label="Block 4
+for(i = 0; i < MAX_STUDENTS; i" shape=box]
+	5 [label="Block 5
+// Calculate Average
+int sum = students[i].marks_ma" shape=box]
+	6 [label="Block 6
+if (students[i].average >= 90)" shape=box]
+	7 [label="Block 7
+students[i].grade = 'A';
+} else if (students[i].average" shape=box]
+	8 [label="Block 8
+students[i].grade = 'B';
+} else if (students[i].average" shape=box]
+	9 [label="Block 9
+students[i].grade = 'C';
+} else if (students[i].average" shape=box]
+	10 [label="Block 10
+students[i].grade = 'D';
+} else {" shape=box]
+	11 [label="Block 11
+students[i].grade = 'F';
+}" shape=box]
+	12 [label="Block 12
+if ((math_pass && sci_pass && " shape=box]
+	13 [label="Block 13
+students[i].passed = 1;
+pass_count++;" shape=box]
+	14 [label="Block 14
+students[i].passed = 0;
+fail_count++;" shape=box]
+	15 [label="Block 15
+for(i = 0; i < MAX_STUDENTS; i" shape=box]
+	16 [label="Block 16
+printf(\"%d\t%d\t%d\t%d\t%.1f\t
+students[i].id," shape=box]
+	17 [label="Block 17
+if(students[i].passed) {" shape=box]
+	18 [label="Block 18
+printf(\"PASS\n\");
+} else {" shape=box]
+	19 [label="Block 19
+printf(\"FAIL\n\");
+}" shape=box]
+	20 [label="Block 20
+}" shape=box]
+	21 [label="Block 21
+if (pass_count > fail_count) {" shape=box]
+	22 [label="Block 22
+printf(\"Overall Class Performa
+} else {" shape=box]
+	23 [label="Block 23
+printf(\"Overall Class Performa
+}" shape=box]
+	24 [label="Block 24
+for(i = 0; i < MAX_STUDENTS; i" shape=box]
+	25 [label="Block 25
+if(students[i].average > max_a" shape=box]
+	26 [label="Block 26
+max_avg = students[i].average;
+topper_idx = i;" shape=box]
+	27 [label="Block 27
+}" shape=box]
+	28 [label="Block 28
+printf(\"Class Topper ID: %d wi" shape=box]
+	29 [label="Block 29
+return 0;" shape=box]
+	30 [label="Block 30
+}" shape=box]
+	1 -> 2
+	2 -> 3
+	2 -> 2
+	3 -> 4
+	4 -> 5
+	4 -> 4
+	5 -> 6
+	6 -> 7
+	7 -> 8
+	8 -> 9
+	9 -> 10
+	10 -> 11
+	11 -> 12
+	12 -> 13
+	13 -> 14
+	14 -> 15
+	15 -> 16
+	15 -> 15
+	16 -> 17
+	17 -> 18
+	18 -> 19
+	19 -> 20
+	20 -> 21
+	21 -> 22
+	22 -> 23
+	23 -> 24
+	24 -> 25
+	24 -> 24
+	25 -> 26
+	26 -> 27
+	27 -> 28
+	28 -> 29
+	29 -> 30
+}

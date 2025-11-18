@@ -1,0 +1,202 @@
+// CFG for prog1_sort.c
+digraph {
+	rankdir=TB
+	1 [label="Block 1
+/*
+* Program: Array Analysis and " shape=box]
+	2 [label="Block 2
+for (i = 0; i < size; i++)" shape=box]
+	3 [label="Block 3
+printf(\"%d \", arr[i]);
+printf(\"\n\");" shape=box]
+	4 [label="Block 4
+for (i = 0; i < n - 1; i++) {" shape=box]
+	5 [label="Block 5
+swapped = 0;" shape=box]
+	6 [label="Block 6
+for (j = 0; j < n - i - 1; j++" shape=box]
+	7 [label="Block 7
+if (arr[j] > arr[j + 1]) {" shape=box]
+	8 [label="Block 8
+swap(&arr[j], &arr[j + 1]);
+swapped = 1;" shape=box]
+	9 [label="Block 9
+}" shape=box]
+	10 [label="Block 10
+// If no two elements were swa" shape=box]
+	11 [label="Block 11
+if (swapped == 0)" shape=box]
+	12 [label="Block 12
+break;
+}" shape=box]
+	13 [label="Block 13
+}" shape=box]
+	14 [label="Block 14
+for (i = 0; i < n - 1; i++) {" shape=box]
+	15 [label="Block 15
+min_idx = i;" shape=box]
+	16 [label="Block 16
+for (j = i + 1; j < n; j++)" shape=box]
+	17 [label="Block 17
+if (arr[j] < arr[min_idx])" shape=box]
+	18 [label="Block 18
+min_idx = j;
+swap(&arr[min_idx], &arr[i]);" shape=box]
+	19 [label="Block 19
+}" shape=box]
+	20 [label="Block 20
+for (i = 0; i < n; i++)" shape=box]
+	21 [label="Block 21
+if (arr[i] == x)" shape=box]
+	22 [label="Block 22
+return i;" shape=box]
+	23 [label="Block 23
+return -1;" shape=box]
+	24 [label="Block 24
+}" shape=box]
+	25 [label="Block 25
+int n1 = sizeof(data1) / sizeo" shape=box]
+	26 [label="Block 26
+int n2 = sizeof(data2) / sizeo" shape=box]
+	27 [label="Block 27
+if (n1 > 0) {" shape=box]
+	28 [label="Block 28
+printf(\"Array 1 is valid. Star
+bubbleSort(data1, n1);" shape=box]
+	29 [label="Block 29
+printf(\"Array 1 is empty.\n\");
+}" shape=box]
+	30 [label="Block 30
+for (int k = 0; k < n1; k++) {" shape=box]
+	31 [label="Block 31
+sum = sum + data1[k];" shape=box]
+	32 [label="Block 32
+if (data1[k] > max_val) {" shape=box]
+	33 [label="Block 33
+max_val = data1[k];
+}" shape=box]
+	34 [label="Block 34
+if (data1[k] < min_val) {" shape=box]
+	35 [label="Block 35
+min_val = data1[k];
+}" shape=box]
+	36 [label="Block 36
+}" shape=box]
+	37 [label="Block 37
+float average = (float)sum / n
+printf(\"Stats for Array 1 -> S" shape=box]
+	38 [label="Block 38
+while (operation_count < 3) {" shape=box]
+	39 [label="Block 39
+printf(\"Preparing Selection So
+operation_count++;" shape=box]
+	40 [label="Block 40
+if (search_result != -1) {" shape=box]
+	41 [label="Block 41
+printf(\"Element found at index
+// Nested conditional logic" shape=box]
+	42 [label="Block 42
+if (search_result < n1 / 2) {" shape=box]
+	43 [label="Block 43
+printf(\"Element is in the firs
+} else {" shape=box]
+	44 [label="Block 44
+printf(\"Element is in the seco
+}" shape=box]
+	45 [label="Block 45
+} else {" shape=box]
+	46 [label="Block 46
+printf(\"Element not found.\n\")
+}" shape=box]
+	47 [label="Block 47
+for(int i=0; i<n1; i++) {" shape=box]
+	48 [label="Block 48
+for(int j=0; j<n2; j++) {" shape=box]
+	49 [label="Block 49
+if(data1[i] == (data2[j] - 100" shape=box]
+	50 [label="Block 50
+overlap_count++;
+}" shape=box]
+	51 [label="Block 51
+}" shape=box]
+	52 [label="Block 52
+}" shape=box]
+	53 [label="Block 53
+printf(\"Found %d elements with" shape=box]
+	54 [label="Block 54
+if(choice) {" shape=box]
+	55 [label="Block 55
+printf(\"Analysis Complete.\n\")
+}" shape=box]
+	56 [label="Block 56
+return 0;" shape=box]
+	57 [label="Block 57
+}" shape=box]
+	1 -> 2
+	2 -> 3
+	2 -> 2
+	3 -> 4
+	4 -> 5
+	4 -> 4
+	5 -> 6
+	6 -> 7
+	6 -> 6
+	7 -> 8
+	8 -> 9
+	9 -> 10
+	10 -> 11
+	11 -> 12
+	12 -> 13
+	13 -> 14
+	14 -> 15
+	14 -> 14
+	15 -> 16
+	16 -> 17
+	16 -> 16
+	17 -> 18
+	18 -> 19
+	19 -> 20
+	20 -> 21
+	20 -> 20
+	21 -> 22
+	22 -> 23
+	23 -> 24
+	24 -> 25
+	25 -> 26
+	26 -> 27
+	26 -> 26
+	27 -> 28
+	28 -> 29
+	29 -> 30
+	30 -> 31
+	30 -> 30
+	31 -> 32
+	32 -> 33
+	33 -> 34
+	34 -> 35
+	35 -> 36
+	36 -> 37
+	37 -> 38
+	38 -> 39
+	38 -> 38
+	39 -> 40
+	40 -> 41
+	41 -> 42
+	42 -> 43
+	43 -> 44
+	44 -> 45
+	45 -> 46
+	46 -> 47
+	47 -> 48
+	47 -> 47
+	48 -> 49
+	48 -> 48
+	49 -> 50
+	50 -> 51
+	51 -> 52
+	52 -> 53
+	53 -> 54
+	54 -> 55
+	55 -> 56
+	56 -> 57
+}

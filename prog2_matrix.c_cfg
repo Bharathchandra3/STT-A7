@@ -1,0 +1,193 @@
+// CFG for prog2_matrix.c
+digraph {
+	rankdir=TB
+	1 [label="Block 1
+/*
+* Program: Matrix Operations" shape=box]
+	2 [label="Block 2
+for (i = 0; i < SIZE; i++) {" shape=box]
+	3 [label="Block 3
+for (j = 0; j < SIZE; j++) {" shape=box]
+	4 [label="Block 4
+matA[i][j] = i + j;
+matB[i][j] = i * j;" shape=box]
+	5 [label="Block 5
+if(matB[i][j] == 0) matB[i][j]" shape=box]
+	6 [label="Block 6
+}" shape=box]
+	7 [label="Block 7
+}" shape=box]
+	8 [label="Block 8
+}" shape=box]
+	9 [label="Block 9
+for (i = 0; i < SIZE; i++) {" shape=box]
+	10 [label="Block 10
+for (j = 0; j < SIZE; j++) {" shape=box]
+	11 [label="Block 11
+printf(\"%4d \", result[i][j]);
+}" shape=box]
+	12 [label="Block 12
+printf(\"\n\");
+}" shape=box]
+	13 [label="Block 13
+printf(\"\n\");
+}" shape=box]
+	14 [label="Block 14
+if (operation_code == 1) {" shape=box]
+	15 [label="Block 15
+printf(\"Performing Addition..." shape=box]
+	16 [label="Block 16
+for (i = 0; i < SIZE; i++) {" shape=box]
+	17 [label="Block 17
+for (j = 0; j < SIZE; j++) {" shape=box]
+	18 [label="Block 18
+result[i][j] = matA[i][j] + ma
+}" shape=box]
+	19 [label="Block 19
+}" shape=box]
+	20 [label="Block 20
+printResult(\"A + B\");
+}" shape=box]
+	21 [label="Block 21
+if (operation_code == 2) {" shape=box]
+	22 [label="Block 22
+printf(\"Performing Multiplicat
+// Reset result" shape=box]
+	23 [label="Block 23
+for(i=0; i<SIZE; i++)" shape=box]
+	24 [label="Block 24
+for(j=0; j<SIZE; j++)" shape=box]
+	25 [label="Block 25
+result[i][j] = 0;" shape=box]
+	26 [label="Block 26
+for (i = 0; i < SIZE; i++) {" shape=box]
+	27 [label="Block 27
+for (j = 0; j < SIZE; j++) {" shape=box]
+	28 [label="Block 28
+for (k = 0; k < SIZE; k++) {" shape=box]
+	29 [label="Block 29
+result[i][j] += matA[i][k] * m
+}" shape=box]
+	30 [label="Block 30
+}" shape=box]
+	31 [label="Block 31
+}" shape=box]
+	32 [label="Block 32
+printResult(\"A * B\");
+}" shape=box]
+	33 [label="Block 33
+for (i = 0; i < SIZE; i++) {" shape=box]
+	34 [label="Block 34
+for (j = 0; j < SIZE; j++) {" shape=box]
+	35 [label="Block 35
+result[j][i] = matA[i][j];
+}" shape=box]
+	36 [label="Block 36
+}" shape=box]
+	37 [label="Block 37
+printResult(\"Transpose A\");" shape=box]
+	38 [label="Block 38
+for(i=0; i<SIZE; i++) {" shape=box]
+	39 [label="Block 39
+diag_sum_main += matA[i][i];
+diag_sum_anti += matA[i][SIZE " shape=box]
+	40 [label="Block 40
+if(diag_sum_main > diag_sum_an" shape=box]
+	41 [label="Block 41
+printf(\"Main diagonal is domin
+} else {" shape=box]
+	42 [label="Block 42
+printf(\"Anti-diagonal is domin
+}" shape=box]
+	43 [label="Block 43
+for(i=0; i<SIZE; i++) {" shape=box]
+	44 [label="Block 44
+for(j=0; j<SIZE; j++) {" shape=box]
+	45 [label="Block 45
+result[i][j] = result[i][j] * " shape=box]
+	46 [label="Block 46
+if(result[i][j] % 2 == 0) {" shape=box]
+	47 [label="Block 47
+count_even++;
+}" shape=box]
+	48 [label="Block 48
+}" shape=box]
+	49 [label="Block 49
+}" shape=box]
+	50 [label="Block 50
+printf(\"Count of even numbers " shape=box]
+	51 [label="Block 51
+return 0;" shape=box]
+	52 [label="Block 52
+}" shape=box]
+	1 -> 2
+	2 -> 3
+	2 -> 2
+	3 -> 4
+	3 -> 3
+	4 -> 5
+	5 -> 6
+	5 -> 5
+	6 -> 7
+	7 -> 8
+	8 -> 9
+	9 -> 10
+	9 -> 9
+	10 -> 11
+	10 -> 10
+	11 -> 12
+	12 -> 13
+	13 -> 14
+	14 -> 15
+	15 -> 16
+	15 -> 15
+	16 -> 17
+	16 -> 16
+	17 -> 18
+	17 -> 17
+	18 -> 19
+	19 -> 20
+	20 -> 21
+	21 -> 22
+	22 -> 23
+	23 -> 24
+	23 -> 23
+	24 -> 25
+	24 -> 24
+	25 -> 26
+	26 -> 27
+	26 -> 26
+	27 -> 28
+	27 -> 27
+	28 -> 29
+	28 -> 28
+	29 -> 30
+	30 -> 31
+	31 -> 32
+	32 -> 33
+	32 -> 32
+	33 -> 34
+	33 -> 33
+	34 -> 35
+	34 -> 34
+	35 -> 36
+	36 -> 37
+	37 -> 38
+	38 -> 39
+	38 -> 38
+	39 -> 40
+	40 -> 41
+	41 -> 42
+	42 -> 43
+	43 -> 44
+	43 -> 43
+	44 -> 45
+	44 -> 44
+	45 -> 46
+	46 -> 47
+	47 -> 48
+	48 -> 49
+	49 -> 50
+	50 -> 51
+	51 -> 52
+}
