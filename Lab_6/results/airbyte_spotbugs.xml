@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.6" sequence="0" timestamp="1760878631455" analysisTimestamp="1761068203891" release="">
+  <Project projectName="">
+    <Jar>airbyte</Jar>
+    <SrcDir>/home/set-iitgn-vm/Desktop/Stt_lab6/airbyte</SrcDir>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.gradle.cli.CommandLineOption">
+      <SourceLine classname="org.gradle.cli.CommandLineOption" start="23" end="114" sourcefile="CommandLineOption.java" sourcepath="org/gradle/cli/CommandLineOption.java"/>
+    </Class>
+    <Method classname="org.gradle.cli.CommandLineOption" name="getOptions" signature="()Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="org.gradle.cli.CommandLineOption" start="37" end="37" startBytecode="0" endBytecode="46" sourcefile="CommandLineOption.java" sourcepath="org/gradle/cli/CommandLineOption.java"/>
+    </Method>
+    <Field classname="org.gradle.cli.CommandLineOption" name="options" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="org.gradle.cli.CommandLineOption" sourcefile="CommandLineOption.java" sourcepath="org/gradle/cli/CommandLineOption.java"/>
+    </Field>
+    <SourceLine classname="org.gradle.cli.CommandLineOption" start="37" end="37" startBytecode="4" endBytecode="4" sourcefile="CommandLineOption.java" sourcepath="org/gradle/cli/CommandLineOption.java"/>
+  </BugInstance>
+  <BugInstance type="SE_COMPARATOR_SHOULD_BE_SERIALIZABLE" priority="2" rank="19" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="org.gradle.cli.CommandLineParser$CaseInsensitiveStringComparator">
+      <SourceLine classname="org.gradle.cli.CommandLineParser$CaseInsensitiveStringComparator" start="508" end="514" sourcefile="CommandLineParser.java" sourcepath="org/gradle/cli/CommandLineParser.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SE_COMPARATOR_SHOULD_BE_SERIALIZABLE" priority="2" rank="19" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="org.gradle.cli.CommandLineParser$OptionComparator">
+      <SourceLine classname="org.gradle.cli.CommandLineParser$OptionComparator" start="500" end="504" sourcefile="CommandLineParser.java" sourcepath="org/gradle/cli/CommandLineParser.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SE_COMPARATOR_SHOULD_BE_SERIALIZABLE" priority="2" rank="19" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="org.gradle.cli.CommandLineParser$OptionStringComparator">
+      <SourceLine classname="org.gradle.cli.CommandLineParser$OptionStringComparator" start="518" end="528" sourcefile="CommandLineParser.java" sourcepath="org/gradle/cli/CommandLineParser.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.gradle.cli.ParsedCommandLine">
+      <SourceLine classname="org.gradle.cli.ParsedCommandLine" start="21" end="128" sourcefile="ParsedCommandLine.java" sourcepath="org/gradle/cli/ParsedCommandLine.java"/>
+    </Class>
+    <Method classname="org.gradle.cli.ParsedCommandLine" name="getExtraArguments" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.gradle.cli.ParsedCommandLine" start="108" end="108" startBytecode="0" endBytecode="46" sourcefile="ParsedCommandLine.java" sourcepath="org/gradle/cli/ParsedCommandLine.java"/>
+    </Method>
+    <Field classname="org.gradle.cli.ParsedCommandLine" name="extraArguments" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.gradle.cli.ParsedCommandLine" sourcefile="ParsedCommandLine.java" sourcepath="org/gradle/cli/ParsedCommandLine.java"/>
+    </Field>
+    <SourceLine classname="org.gradle.cli.ParsedCommandLine" start="108" end="108" startBytecode="4" endBytecode="4" sourcefile="ParsedCommandLine.java" sourcepath="org/gradle/cli/ParsedCommandLine.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.gradle.cli.ParsedCommandLineOption">
+      <SourceLine classname="org.gradle.cli.ParsedCommandLineOption" start="21" end="43" sourcefile="ParsedCommandLineOption.java" sourcepath="org/gradle/cli/ParsedCommandLineOption.java"/>
+    </Class>
+    <Method classname="org.gradle.cli.ParsedCommandLineOption" name="getValues" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.gradle.cli.ParsedCommandLineOption" start="35" end="35" startBytecode="0" endBytecode="46" sourcefile="ParsedCommandLineOption.java" sourcepath="org/gradle/cli/ParsedCommandLineOption.java"/>
+    </Method>
+    <Field classname="org.gradle.cli.ParsedCommandLineOption" name="values" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.gradle.cli.ParsedCommandLineOption" sourcefile="ParsedCommandLineOption.java" sourcepath="org/gradle/cli/ParsedCommandLineOption.java"/>
+    </Field>
+    <SourceLine classname="org.gradle.cli.ParsedCommandLineOption" start="35" end="35" startBytecode="4" endBytecode="4" sourcefile="ParsedCommandLineOption.java" sourcepath="org/gradle/cli/ParsedCommandLineOption.java"/>
+  </BugInstance>
+  <BugInstance type="BC_VACUOUS_INSTANCEOF" priority="2" rank="17" abbrev="BC" category="STYLE">
+    <Class classname="org.gradle.wrapper.BootstrapMainStarter">
+      <SourceLine classname="org.gradle.wrapper.BootstrapMainStarter" start="25" end="54" sourcefile="BootstrapMainStarter.java" sourcepath="org/gradle/wrapper/BootstrapMainStarter.java"/>
+    </Class>
+    <Method classname="org.gradle.wrapper.BootstrapMainStarter" name="start" signature="([Ljava/lang/String;Ljava/io/File;)V" isStatic="false">
+      <SourceLine classname="org.gradle.wrapper.BootstrapMainStarter" start="27" end="39" startBytecode="0" endBytecode="63" sourcefile="BootstrapMainStarter.java" sourcepath="org/gradle/wrapper/BootstrapMainStarter.java"/>
+    </Method>
+    <Type descriptor="Ljava/net/URLClassLoader;" role="TYPE_FOUND">
+      <SourceLine classname="java.net.URLClassLoader" start="74" end="792" sourcefile="URLClassLoader.java" sourcepath="java/net/URLClassLoader.java"/>
+    </Type>
+    <Type descriptor="Ljava/io/Closeable;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.io.Closeable" sourcefile="Closeable.java" sourcepath="java/io/Closeable.java"/>
+    </Type>
+    <SourceLine classname="org.gradle.wrapper.BootstrapMainStarter" start="36" end="36" startBytecode="111" endBytecode="111" sourcefile="BootstrapMainStarter.java" sourcepath="org/gradle/wrapper/BootstrapMainStarter.java"/>
+  </BugInstance>
+  <BugInstance type="DP_CREATE_CLASSLOADER_INSIDE_DO_PRIVILEGED" priority="2" rank="18" abbrev="DP" category="MALICIOUS_CODE">
+    <Class classname="org.gradle.wrapper.BootstrapMainStarter">
+      <SourceLine classname="org.gradle.wrapper.BootstrapMainStarter" start="25" end="54" sourcefile="BootstrapMainStarter.java" sourcepath="org/gradle/wrapper/BootstrapMainStarter.java"/>
+    </Class>
+    <Method classname="org.gradle.wrapper.BootstrapMainStarter" name="start" signature="([Ljava/lang/String;Ljava/io/File;)V" isStatic="false">
+      <SourceLine classname="org.gradle.wrapper.BootstrapMainStarter" start="27" end="39" startBytecode="0" endBytecode="310" sourcefile="BootstrapMainStarter.java" sourcepath="org/gradle/wrapper/BootstrapMainStarter.java"/>
+    </Method>
+    <Class classname="java.net.URLClassLoader">
+      <SourceLine classname="java.net.URLClassLoader" start="74" end="792" sourcefile="URLClassLoader.java" sourcepath="java/net/URLClassLoader.java"/>
+    </Class>
+    <SourceLine classname="org.gradle.wrapper.BootstrapMainStarter" start="31" end="31" startBytecode="30" endBytecode="30" sourcefile="BootstrapMainStarter.java" sourcepath="org/gradle/wrapper/BootstrapMainStarter.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.gradle.wrapper.Download">
+      <SourceLine classname="org.gradle.wrapper.Download" start="37" end="212" sourcefile="Download.java" sourcepath="org/gradle/wrapper/Download.java"/>
+    </Class>
+    <Method classname="org.gradle.wrapper.Download" name="&lt;init&gt;" signature="(Lorg/gradle/wrapper/Logger;Lorg/gradle/wrapper/DownloadProgressListener;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;I)V" isStatic="false">
+      <SourceLine classname="org.gradle.wrapper.Download" start="70" end="78" startBytecode="0" endBytecode="201" sourcefile="Download.java" sourcepath="org/gradle/wrapper/Download.java"/>
+    </Method>
+    <Field classname="org.gradle.wrapper.Download" name="logger" signature="Lorg/gradle/wrapper/Logger;" isStatic="false">
+      <SourceLine classname="org.gradle.wrapper.Download" sourcefile="Download.java" sourcepath="org/gradle/wrapper/Download.java"/>
+    </Field>
+    <LocalVariable name="logger" register="1" pc="6" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.gradle.wrapper.Download" start="71" end="71" startBytecode="6" endBytecode="6" sourcefile="Download.java" sourcepath="org/gradle/wrapper/Download.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.gradle.wrapper.Download">
+      <SourceLine classname="org.gradle.wrapper.Download" start="37" end="212" sourcefile="Download.java" sourcepath="org/gradle/wrapper/Download.java"/>
+    </Class>
+    <Method classname="org.gradle.wrapper.Download" name="&lt;init&gt;" signature="(Lorg/gradle/wrapper/Logger;Lorg/gradle/wrapper/DownloadProgressListener;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;I)V" isStatic="false">
+      <SourceLine classname="org.gradle.wrapper.Download" start="70" end="78" startBytecode="0" endBytecode="201" sourcefile="Download.java" sourcepath="org/gradle/wrapper/Download.java"/>
+    </Method>
+    <Field classname="org.gradle.wrapper.Download" name="systemProperties" signature="Ljava/util/Map;" isStatic="false">
+      <SourceLine classname="org.gradle.wrapper.Download" sourcefile="Download.java" sourcepath="org/gradle/wrapper/Download.java"/>
+    </Field>
+    <LocalVariable name="systemProperties" register="5" pc="23" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.gradle.wrapper.Download" start="74" end="74" startBytecode="23" endBytecode="23" sourcefile="Download.java" sourcepath="org/gradle/wrapper/Download.java"/>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="2" rank="17" abbrev="REC" category="STYLE">
+    <Class classname="org.gradle.wrapper.Download">
+      <SourceLine classname="org.gradle.wrapper.Download" start="37" end="212" sourcefile="Download.java" sourcepath="org/gradle/wrapper/Download.java"/>
+    </Class>
+    <Method classname="org.gradle.wrapper.Download" name="base64Encode" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.gradle.wrapper.Download" start="180" end="191" startBytecode="0" endBytecode="363" sourcefile="Download.java" sourcepath="org/gradle/wrapper/Download.java"/>
+    </Method>
+    <SourceLine classname="org.gradle.wrapper.Download" start="186" end="186" startBytecode="81" endBytecode="81" sourcefile="Download.java" sourcepath="org/gradle/wrapper/Download.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" rank="16" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.gradle.wrapper.Download">
+      <SourceLine classname="org.gradle.wrapper.Download" start="37" end="212" sourcefile="Download.java" sourcepath="org/gradle/wrapper/Download.java"/>
+    </Class>
+    <Method classname="org.gradle.wrapper.Download" name="download" signature="(Ljava/net/URI;Ljava/io/File;)V" isStatic="false">
+      <SourceLine classname="org.gradle.wrapper.Download" start="88" end="90" startBytecode="0" endBytecode="84" sourcefile="Download.java" sourcepath="org/gradle/wrapper/Download.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1379" end="1393" startBytecode="0" endBytecode="182" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.gradle.wrapper.Download" start="88" end="88" startBytecode="4" endBytecode="4" sourcefile="Download.java" sourcepath="org/gradle/wrapper/Download.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N">
+    <Class classname="org.gradle.wrapper.Install">
+      <SourceLine classname="org.gradle.wrapper.Install" start="42" end="286" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+    </Class>
+    <Method classname="org.gradle.wrapper.Install" name="setExecutablePermissions" signature="(Ljava/io/File;)V" isStatic="false">
+      <SourceLine classname="org.gradle.wrapper.Install" start="200" end="226" startBytecode="0" endBytecode="511" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="72" end="79" startBytecode="0" endBytecode="108" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.gradle.wrapper.Install" start="209" end="209" startBytecode="79" endBytecode="79" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.gradle.wrapper.Install">
+      <SourceLine classname="org.gradle.wrapper.Install" start="42" end="286" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+    </Class>
+    <Method classname="org.gradle.wrapper.Install" name="&lt;init&gt;" signature="(Lorg/gradle/wrapper/Logger;Lorg/gradle/wrapper/IDownload;Lorg/gradle/wrapper/PathAssembler;)V" isStatic="false">
+      <SourceLine classname="org.gradle.wrapper.Install" start="49" end="53" startBytecode="0" endBytecode="127" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+    </Method>
+    <Field classname="org.gradle.wrapper.Install" name="logger" signature="Lorg/gradle/wrapper/Logger;" isStatic="false">
+      <SourceLine classname="org.gradle.wrapper.Install" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+    </Field>
+    <LocalVariable name="logger" register="1" pc="22" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.gradle.wrapper.Install" start="50" end="50" startBytecode="22" endBytecode="22" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="org.gradle.wrapper.Install">
+      <SourceLine classname="org.gradle.wrapper.Install" start="42" end="286" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+    </Class>
+    <Method classname="org.gradle.wrapper.Install" name="&lt;init&gt;" signature="(Lorg/gradle/wrapper/Logger;Lorg/gradle/wrapper/IDownload;Lorg/gradle/wrapper/PathAssembler;)V" isStatic="false">
+      <SourceLine classname="org.gradle.wrapper.Install" start="49" end="53" startBytecode="0" endBytecode="127" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+    </Method>
+    <Field classname="org.gradle.wrapper.Install" name="pathAssembler" signature="Lorg/gradle/wrapper/PathAssembler;" isStatic="false">
+      <SourceLine classname="org.gradle.wrapper.Install" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+    </Field>
+    <LocalVariable name="pathAssembler" register="3" pc="32" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="org.gradle.wrapper.Install" start="52" end="52" startBytecode="32" endBytecode="32" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" rank="16" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="org.gradle.wrapper.Install">
+      <SourceLine classname="org.gradle.wrapper.Install" start="42" end="286" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+    </Class>
+    <Method classname="org.gradle.wrapper.Install" name="setExecutablePermissions" signature="(Ljava/io/File;)V" isStatic="false">
+      <SourceLine classname="org.gradle.wrapper.Install" start="200" end="226" startBytecode="0" endBytecode="95" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+    </Method>
+    <Type descriptor="Ljava/io/Reader;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.Reader" start="66" end="249" sourcefile="Reader.java" sourcepath="java/io/Reader.java"/>
+    </Type>
+    <SourceLine classname="org.gradle.wrapper.Install" start="209" end="209" startBytecode="66" endBytecode="66" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" rank="16" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.gradle.wrapper.Install">
+      <SourceLine classname="org.gradle.wrapper.Install" start="42" end="286" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+    </Class>
+    <Method classname="org.gradle.wrapper.Install" name="unzip" signature="(Ljava/io/File;Ljava/io/File;)V" isStatic="false">
+      <SourceLine classname="org.gradle.wrapper.Install" start="251" end="274" startBytecode="0" endBytecode="448" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1379" end="1393" startBytecode="0" endBytecode="182" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.gradle.wrapper.Install" start="260" end="260" startBytecode="65" endBytecode="65" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" rank="16" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.gradle.wrapper.Install">
+      <SourceLine classname="org.gradle.wrapper.Install" start="42" end="286" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+    </Class>
+    <Method classname="org.gradle.wrapper.Install" name="verifyDownloadChecksum" signature="(Ljava/lang/String;Ljava/io/File;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.gradle.wrapper.Install" start="163" end="182" startBytecode="0" endBytecode="201" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+    </Method>
+    <Method classname="java.io.File" name="delete" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1045" end="1052" startBytecode="0" endBytecode="91" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.gradle.wrapper.Install" start="167" end="167" startBytecode="21" endBytecode="21" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" rank="16" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.gradle.wrapper.Install$1">
+      <SourceLine classname="org.gradle.wrapper.Install$1" start="63" end="111" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+    </Class>
+    <Method classname="org.gradle.wrapper.Install$1" name="call" signature="()Ljava/io/File;" isStatic="false">
+      <SourceLine classname="org.gradle.wrapper.Install$1" start="65" end="111" startBytecode="0" endBytecode="874" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+    </Method>
+    <Method classname="java.io.File" name="createNewFile" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1018" end="1023" startBytecode="0" endBytecode="98" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.gradle.wrapper.Install$1" start="106" end="106" startBytecode="499" endBytecode="499" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" rank="16" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.gradle.wrapper.Install$1">
+      <SourceLine classname="org.gradle.wrapper.Install$1" start="63" end="111" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+    </Class>
+    <Method classname="org.gradle.wrapper.Install$1" name="call" signature="()Ljava/io/File;" isStatic="false">
+      <SourceLine classname="org.gradle.wrapper.Install$1" start="65" end="111" startBytecode="0" endBytecode="874" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+    </Method>
+    <Method classname="java.io.File" name="delete" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1045" end="1052" startBytecode="0" endBytecode="91" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.gradle.wrapper.Install$1" start="73" end="73" startBytecode="99" endBytecode="99" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+    <SourceLine classname="org.gradle.wrapper.Install$1" start="81" end="81" startBytecode="174" endBytecode="174" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="org.gradle.wrapper.Install$1" start="107" end="107" startBytecode="507" endBytecode="507" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" rank="16" abbrev="RV" category="BAD_PRACTICE">
+    <Class classname="org.gradle.wrapper.Install$1">
+      <SourceLine classname="org.gradle.wrapper.Install$1" start="63" end="111" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+    </Class>
+    <Method classname="org.gradle.wrapper.Install$1" name="call" signature="()Ljava/io/File;" isStatic="false">
+      <SourceLine classname="org.gradle.wrapper.Install$1" start="65" end="111" startBytecode="0" endBytecode="874" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+    </Method>
+    <Method classname="java.io.File" name="renameTo" signature="(Ljava/io/File;)Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1425" end="1436" startBytecode="0" endBytecode="133" sourcefile="File.java" sourcepath="java/io/File.java"/>
+    </Method>
+    <SourceLine classname="org.gradle.wrapper.Install$1" start="84" end="84" startBytecode="231" endBytecode="231" sourcefile="Install.java" sourcepath="org/gradle/wrapper/Install.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N">
+    <Class classname="org.gradle.wrapper.PathAssembler">
+      <SourceLine classname="org.gradle.wrapper.PathAssembler" start="30" end="96" sourcefile="PathAssembler.java" sourcepath="org/gradle/wrapper/PathAssembler.java"/>
+    </Class>
+    <Method classname="org.gradle.wrapper.PathAssembler" name="getHash" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.gradle.wrapper.PathAssembler" start="64" end="69" startBytecode="0" endBytecode="167" sourcefile="PathAssembler.java" sourcepath="org/gradle/wrapper/PathAssembler.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="958" end="958" startBytecode="0" endBytecode="37" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.gradle.wrapper.PathAssembler" start="65" end="65" startBytecode="7" endBytecode="7" sourcefile="PathAssembler.java" sourcepath="org/gradle/wrapper/PathAssembler.java"/>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" rank="18" abbrev="WMI" category="PERFORMANCE">
+    <Class classname="org.gradle.wrapper.SystemPropertiesHandler">
+      <SourceLine classname="org.gradle.wrapper.SystemPropertiesHandler" start="25" end="53" sourcefile="SystemPropertiesHandler.java" sourcepath="org/gradle/wrapper/SystemPropertiesHandler.java"/>
+    </Class>
+    <Method classname="org.gradle.wrapper.SystemPropertiesHandler" name="getSystemProperties" signature="(Ljava/io/File;)Ljava/util/Map;" isStatic="true">
+      <SourceLine classname="org.gradle.wrapper.SystemPropertiesHandler" start="29" end="53" startBytecode="0" endBytecode="448" sourcefile="SystemPropertiesHandler.java" sourcepath="org/gradle/wrapper/SystemPropertiesHandler.java"/>
+    </Method>
+    <SourceLine classname="org.gradle.wrapper.SystemPropertiesHandler" start="49" end="49" startBytecode="156" endBytecode="156" sourcefile="SystemPropertiesHandler.java" sourcepath="org/gradle/wrapper/SystemPropertiesHandler.java"/>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE">
+    <Class classname="org.gradle.wrapper.WrapperExecutor">
+      <SourceLine classname="org.gradle.wrapper.WrapperExecutor" start="36" end="141" sourcefile="WrapperExecutor.java" sourcepath="org/gradle/wrapper/WrapperExecutor.java"/>
+    </Class>
+    <Method classname="org.gradle.wrapper.WrapperExecutor" name="&lt;init&gt;" signature="(Ljava/io/File;Ljava/util/Properties;)V" isStatic="false">
+      <SourceLine classname="org.gradle.wrapper.WrapperExecutor" start="49" end="66" startBytecode="0" endBytecode="367" sourcefile="WrapperExecutor.java" sourcepath="org/gradle/wrapper/WrapperExecutor.java"/>
+    </Method>
+    <SourceLine classname="org.gradle.wrapper.WrapperExecutor" start="63" end="63" startBytecode="194" endBytecode="194" sourcefile="WrapperExecutor.java" sourcepath="org/gradle/wrapper/WrapperExecutor.java"/>
+    <SourceLine classname="org.gradle.wrapper.WrapperExecutor" start="63" end="63" startBytecode="194" endBytecode="194" sourcefile="WrapperExecutor.java" sourcepath="org/gradle/wrapper/WrapperExecutor.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="org.gradle.wrapper.WrapperExecutor">
+      <SourceLine classname="org.gradle.wrapper.WrapperExecutor" start="36" end="141" sourcefile="WrapperExecutor.java" sourcepath="org/gradle/wrapper/WrapperExecutor.java"/>
+    </Class>
+    <Method classname="org.gradle.wrapper.WrapperExecutor" name="getConfiguration" signature="()Lorg/gradle/wrapper/WrapperConfiguration;" isStatic="false">
+      <SourceLine classname="org.gradle.wrapper.WrapperExecutor" start="105" end="105" startBytecode="0" endBytecode="46" sourcefile="WrapperExecutor.java" sourcepath="org/gradle/wrapper/WrapperExecutor.java"/>
+    </Method>
+    <Field classname="org.gradle.wrapper.WrapperExecutor" name="config" signature="Lorg/gradle/wrapper/WrapperConfiguration;" isStatic="false">
+      <SourceLine classname="org.gradle.wrapper.WrapperExecutor" sourcefile="WrapperExecutor.java" sourcepath="org/gradle/wrapper/WrapperExecutor.java"/>
+    </Field>
+    <SourceLine classname="org.gradle.wrapper.WrapperExecutor" start="105" end="105" startBytecode="4" endBytecode="4" sourcefile="WrapperExecutor.java" sourcepath="org/gradle/wrapper/WrapperExecutor.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Sun, 19 Oct 2025 18:27:11 +0530" total_classes="45" referenced_classes="157" total_bugs="25" total_size="1288" num_packages="3" java_version="1.8.0_392" vm_version="25.392-b08" cpu_seconds="11.95" clock_seconds="3.88" peak_mbytes="304.86" alloc_mbytes="683.00" gc_seconds="0.16" priority_2="23" priority_1="2">
+    <PackageStats package="org.gradle.cli" total_bugs="6" total_types="24" total_size="535" priority_2="6">
+      <ClassStats class="org.gradle.cli.AbstractCommandLineConverter" sourceFile="AbstractCommandLineConverter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.gradle.cli.AbstractPropertiesCommandLineConverter" sourceFile="AbstractPropertiesCommandLineConverter.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineArgumentException" sourceFile="CommandLineArgumentException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineConverter" sourceFile="CommandLineConverter.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineOption" sourceFile="CommandLineOption.java" interface="false" size="63" bugs="1" priority_2="1"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser" sourceFile="CommandLineParser.java" interface="false" size="131" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$1" sourceFile="CommandLineParser.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$AfterFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$AfterOptions" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$BeforeFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$CaseInsensitiveStringComparator" sourceFile="CommandLineParser.java" interface="false" size="10" bugs="1" priority_2="1"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$KnownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$MissingOptionArgState" sourceFile="CommandLineParser.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$OptionAwareParserState" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$OptionComparator" sourceFile="CommandLineParser.java" interface="false" size="9" bugs="1" priority_2="1"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$OptionParserState" sourceFile="CommandLineParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$OptionString" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$OptionStringComparator" sourceFile="CommandLineParser.java" interface="false" size="13" bugs="1" priority_2="1"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$ParserState" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$UnknownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.gradle.cli.ParsedCommandLine" sourceFile="ParsedCommandLine.java" interface="false" size="64" bugs="1" priority_2="1"/>
+      <ClassStats class="org.gradle.cli.ParsedCommandLineOption" sourceFile="ParsedCommandLineOption.java" interface="false" size="18" bugs="1" priority_2="1"/>
+      <ClassStats class="org.gradle.cli.ProjectPropertiesCommandLineConverter" sourceFile="ProjectPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.gradle.cli.SystemPropertiesCommandLineConverter" sourceFile="SystemPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.gradle.util.internal" total_bugs="0" total_types="1" total_size="22">
+      <ClassStats class="org.gradle.util.internal.ZipSlip" sourceFile="ZipSlip.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.gradle.wrapper" total_bugs="19" total_types="20" total_size="731" priority_2="17" priority_1="2">
+      <ClassStats class="org.gradle.wrapper.BootstrapMainStarter" sourceFile="BootstrapMainStarter.java" interface="false" size="22" bugs="2" priority_2="2"/>
+      <ClassStats class="org.gradle.wrapper.BootstrapMainStarter$1" sourceFile="BootstrapMainStarter.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.Download" sourceFile="Download.java" interface="false" size="117" bugs="4" priority_2="4"/>
+      <ClassStats class="org.gradle.wrapper.Download$1" sourceFile="Download.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.Download$DefaultDownloadProgressListener" sourceFile="Download.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.Download$ProxyAuthenticator" sourceFile="Download.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.DownloadProgressListener" sourceFile="DownloadProgressListener.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.ExclusiveFileAccessManager" sourceFile="ExclusiveFileAccessManager.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.GradleUserHomeLookup" sourceFile="GradleUserHomeLookup.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.GradleWrapperMain" sourceFile="GradleWrapperMain.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.IDownload" sourceFile="IDownload.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.Install" sourceFile="Install.java" interface="false" size="134" bugs="6" priority_2="5" priority_1="1"/>
+      <ClassStats class="org.gradle.wrapper.Install$1" sourceFile="Install.java" interface="false" size="45" bugs="3" priority_2="3"/>
+      <ClassStats class="org.gradle.wrapper.Install$InstallCheck" sourceFile="Install.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.Logger" sourceFile="Logger.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.PathAssembler" sourceFile="PathAssembler.java" interface="false" size="44" bugs="1" priority_1="1"/>
+      <ClassStats class="org.gradle.wrapper.PathAssembler$LocalDistribution" sourceFile="PathAssembler.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.SystemPropertiesHandler" sourceFile="SystemPropertiesHandler.java" interface="false" size="23" bugs="1" priority_2="1"/>
+      <ClassStats class="org.gradle.wrapper.WrapperConfiguration" sourceFile="WrapperConfiguration.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.WrapperExecutor" sourceFile="WrapperExecutor.java" interface="false" size="75" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="281" invocations="940" avgMicrosecondsPerInvocation="299" maxMicrosecondsPerInvocation="16034" standardDeviationMicrosecondsPerInvocation="842"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="233" invocations="690" avgMicrosecondsPerInvocation="338" maxMicrosecondsPerInvocation="121575" standardDeviationMicrosecondsPerInvocation="4629"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="149" invocations="157" avgMicrosecondsPerInvocation="954" maxMicrosecondsPerInvocation="13964" standardDeviationMicrosecondsPerInvocation="1843"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="117" invocations="157" avgMicrosecondsPerInvocation="746" maxMicrosecondsPerInvocation="6190" standardDeviationMicrosecondsPerInvocation="1141"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="108" invocations="944" avgMicrosecondsPerInvocation="115" maxMicrosecondsPerInvocation="3244" standardDeviationMicrosecondsPerInvocation="317"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="103" invocations="238" avgMicrosecondsPerInvocation="435" maxMicrosecondsPerInvocation="17178" standardDeviationMicrosecondsPerInvocation="1848"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="97" invocations="245" avgMicrosecondsPerInvocation="396" maxMicrosecondsPerInvocation="14830" standardDeviationMicrosecondsPerInvocation="1304"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="91" invocations="239" avgMicrosecondsPerInvocation="384" maxMicrosecondsPerInvocation="10272" standardDeviationMicrosecondsPerInvocation="1094"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="86" invocations="245" avgMicrosecondsPerInvocation="354" maxMicrosecondsPerInvocation="9311" standardDeviationMicrosecondsPerInvocation="1063"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="78" invocations="234" avgMicrosecondsPerInvocation="333" maxMicrosecondsPerInvocation="6829" standardDeviationMicrosecondsPerInvocation="753"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="73" invocations="4209" avgMicrosecondsPerInvocation="17" maxMicrosecondsPerInvocation="55158" standardDeviationMicrosecondsPerInvocation="850"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="70" invocations="219" avgMicrosecondsPerInvocation="323" maxMicrosecondsPerInvocation="18974" standardDeviationMicrosecondsPerInvocation="1351"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="65" invocations="239" avgMicrosecondsPerInvocation="272" maxMicrosecondsPerInvocation="8730" standardDeviationMicrosecondsPerInvocation="678"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="58" invocations="45" avgMicrosecondsPerInvocation="1301" maxMicrosecondsPerInvocation="7185" standardDeviationMicrosecondsPerInvocation="1678"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="55" invocations="189" avgMicrosecondsPerInvocation="292" maxMicrosecondsPerInvocation="7713" standardDeviationMicrosecondsPerInvocation="719"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="53" invocations="157" avgMicrosecondsPerInvocation="339" maxMicrosecondsPerInvocation="5119" standardDeviationMicrosecondsPerInvocation="667"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="51" invocations="157" avgMicrosecondsPerInvocation="329" maxMicrosecondsPerInvocation="9472" standardDeviationMicrosecondsPerInvocation="1049"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="47" invocations="254" avgMicrosecondsPerInvocation="185" maxMicrosecondsPerInvocation="23799" standardDeviationMicrosecondsPerInvocation="1491"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="42" invocations="234" avgMicrosecondsPerInvocation="181" maxMicrosecondsPerInvocation="28636" standardDeviationMicrosecondsPerInvocation="1868"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="37" invocations="157" avgMicrosecondsPerInvocation="238" maxMicrosecondsPerInvocation="4931" standardDeviationMicrosecondsPerInvocation="540"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="36" invocations="157" avgMicrosecondsPerInvocation="234" maxMicrosecondsPerInvocation="6374" standardDeviationMicrosecondsPerInvocation="705"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="34" invocations="157" avgMicrosecondsPerInvocation="220" maxMicrosecondsPerInvocation="5878" standardDeviationMicrosecondsPerInvocation="560"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="34" invocations="892" avgMicrosecondsPerInvocation="38" maxMicrosecondsPerInvocation="1044" standardDeviationMicrosecondsPerInvocation="81"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="33" invocations="157" avgMicrosecondsPerInvocation="213" maxMicrosecondsPerInvocation="2642" standardDeviationMicrosecondsPerInvocation="355"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="26" invocations="157" avgMicrosecondsPerInvocation="166" maxMicrosecondsPerInvocation="6451" standardDeviationMicrosecondsPerInvocation="697"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUncalledPrivateMethods" totalMilliseconds="25" invocations="45" avgMicrosecondsPerInvocation="573" maxMicrosecondsPerInvocation="17073" standardDeviationMicrosecondsPerInvocation="2493"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="23" invocations="239" avgMicrosecondsPerInvocation="97" maxMicrosecondsPerInvocation="2748" standardDeviationMicrosecondsPerInvocation="239"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="21" invocations="157" avgMicrosecondsPerInvocation="139" maxMicrosecondsPerInvocation="3060" standardDeviationMicrosecondsPerInvocation="317"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="21" invocations="45" avgMicrosecondsPerInvocation="473" maxMicrosecondsPerInvocation="6373" standardDeviationMicrosecondsPerInvocation="1298"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

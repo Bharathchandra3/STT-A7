@@ -1,0 +1,45 @@
+{
+  "version": "v2.8.0",
+  "id": "a7ea13e5-06f9-4bed-ad54-10b726363396",
+  "repositoryID": "00000000-0000-0000-0000-000000000000",
+  "repositoryName": "",
+  "workspaceID": "00000000-0000-0000-0000-000000000000",
+  "workspaceName": "",
+  "status": "error",
+  "errors": "{HORUSEC_CLI} Error while running tool HorusecEngine: open /home/set-iitgn-vm/Desktop/Stt_lab6/airbyte/.horusec/a7ea13e5-06f9-4bed-ad54-10b726363396/docusaurus/platform_versioned_docs/version-1.7/assets/source/azure-blob-storage: too many open files;{HORUSEC_CLI} Error while running tool HorusecEngine: open /home/set-iitgn-vm/Desktop/Stt_lab6/airbyte/.horusec/a7ea13e5-06f9-4bed-ad54-10b726363396/airbyte-integrations/connectors/source-instagram/metadata.yaml: too many open files;{HORUSEC_CLI} Error while running tool HorusecEngine: open /home/set-iitgn-vm/Desktop/Stt_lab6/airbyte/.horusec/a7ea13e5-06f9-4bed-ad54-10b726363396/airbyte-cdk/bulk/toolkits/extract-jdbc/src/main/kotlin/io/airbyte/cdk/read/JdbcPartition.kt: too many open files;{HORUSEC_CLI} Error while running tool HorusecEngine: open /home/set-iitgn-vm/Desktop/Stt_lab6/airbyte/.horusec/a7ea13e5-06f9-4bed-ad54-10b726363396/airbyte-integrations/connectors/source-google-analytics-v4/acceptance-test-config.yml: too many open files",
+  "createdAt": "2025-10-21T23:03:35.976647289+05:30",
+  "finishedAt": "2025-10-21T23:04:22.393904519+05:30",
+  "analysisVulnerabilities": [
+    {
+      "vulnerabilityID": "00000000-0000-0000-0000-000000000000",
+      "analysisID": "a7ea13e5-06f9-4bed-ad54-10b726363396",
+      "createdAt": "2025-10-21T23:04:22.393921657+05:30",
+      "vulnerabilities": {
+        "vulnerabilityID": "42a496ac-3903-4e8e-8807-723ebc27e0c0",
+        "line": "37",
+        "column": "8",
+        "confidence": "MEDIUM",
+        "file": "docusaurus/src/scripts/download-abctl-buttons.js",
+        "code": "window.addEventListener(\"load\", () =\u003e {",
+        "details": "(1/1) * Possible vulnerability detected: Origins should be verified during cross-origin communications\nBrowsers allow message exchanges between Window objects of different origins. Because any window can send / receive messages from other window it is important to verify the sender's / receiver's identity: When sending message with postMessage method, the identity's receiver should be defined (the wildcard keyword (*) should not be used).\nWhen receiving message with message event, the sender's identity should be verified using the origin and possibly source properties. For more information checkout the OWASP A2:2017 (https://owasp.org/www-project-top-ten/2017/A2_2017-Broken_Authentication) and (https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) advisory.",
+        "securityTool": "HorusecEngine",
+        "language": "JavaScript",
+        "severity": "HIGH",
+        "type": "Vulnerability",
+        "commitAuthor": "-",
+        "commitEmail": "-",
+        "commitHash": "-",
+        "commitMessage": "-",
+        "commitDate": "-",
+        "rule_id": "HS-JAVASCRIPT-11",
+        "vulnHash": "1dfe477f07a06f1ef7c6af99cac42e06d501716977f188a848c6fa80066b3970",
+        "deprecatedHashes": [
+          "36937853da3fe78981bb9547c97738ac4ce526352d48fe47cfe75c6d3ca77f08",
+          "45347f4bd788283823addd37eea672eca770efc355a118db1e7ad72a8a483476"
+        ],
+        "securityToolVersion": "",
+        "securityToolInfoUri": ""
+      }
+    }
+  ]
+}
